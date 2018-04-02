@@ -1,13 +1,30 @@
 const client = ShopifyBuy.buildClient({
   domain: 'popmaker.myshopify.com',
-  storefrontAccessToken: 'f04a5989efb3f33d33da532385b617c6'
+  storefrontAccessToken: '4f2954b6093c26dd8d230cdc3238c97b'
 });
+
+
+const lineItemsToAdd = [
+  {variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC83MDQxODgxMDc5ODQx', quantity: 1}
+];
+
+let checkoutId = null
+
+client.checkout.create().then((checkout) => {
+  checkoutId = checkout.id
+
+  checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
+    console.log(checkout.lineItems);
+  })
+})
+
+
 
 const glccJerseyProductId = 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzUzOTg0NjkzNDU2MQ=='
 
 client.product.fetch(glccJerseyProductId).then((products) => {
   // Do something with the products
-  console.log(products.title);
+  console.log(products);
 });
 
 
