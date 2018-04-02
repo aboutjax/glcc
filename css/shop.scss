@@ -6,9 +6,12 @@ $white: #FFFFFF;
 $dark-gray: #343434;
 
 
+.c-home-background {
+  transition: all 1s ease-in-out;
+}
+
 .c-home {
   min-height: 100vh;
-  transition: background-color 0.6s ease-in-out;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -47,6 +50,7 @@ $dark-gray: #343434;
 }
 
 .c-home__logo {
+  transition: color 0.2s ease-in-out;
 
   @media screen and (max-width: $small) {
     display: none;
