@@ -5,14 +5,9 @@ $small: 700px;
 $white: #FFFFFF;
 $dark-gray: #343434;
 
-body, html {
-  width: 100vw;
-  height: 100vh;
-}
 
 .c-home {
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   transition: background-color 0.6s ease-in-out;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -81,9 +76,9 @@ body, html {
 }
 
 .c-home__content {
+
   @media screen and (max-width: $small) {
     order: 2;
-    padding: 1rem;
     padding-bottom: 10rem;
   }
 

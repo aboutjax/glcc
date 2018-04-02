@@ -5,38 +5,81 @@
 layout: shop
 description: '2018 Summer Jersey'
 product-title: "2018 Summer Jersey"
-product-description: "This is a new short-sleeve cycling jersey designed for riding in hot and humid climates. The fabric of the jersey is extremely technical: perforated for breathability, high-wicking to take sweat away from your skin, and fast-drying. The jersey has an ‘aero’ fit, for an aggressive on-bike position."
+product-description: "This is a short-sleeve cycling jersey designed for riding in hot and humid climates. The fabric of the jersey is technical: perforated for breathability, high-wicking to take sweat away from your skin, and fast-drying."
 ---
 
-<div id="background-colour" class="h100 w100 c-home c-home--black">
+<section id="background-colour" class="c-home--black">
 
-  <div class="c-logo">
-    <div class="ph4">
-      {% include logo.html %}
-    </div>
-  </div>
-
-  <div class="flex flex-row justify-center items-center c-home__content">
-    <div class="center measure ph4">
-      <div class="c-home__logo mb5">
+  <div class="c-home mw8 center">
+    <div class="c-logo">
+      <div class="ph4">
         {% include logo.html %}
       </div>
-      <h4 class="f6 gray ttu tracked mt0 mb0 fw3">Grey Lynn Cycling Club</h4>
-      <h1 class="f2-l f3 fw8 mt1 mb1">{{ page.product-title }}</h1>
-      <p class="f4-l mt3 mb3 fw4">$60.00 NZD</p>
-      <p class="c-home__paragraph f5 lh-copy mt1">
-        {{ page.product-description }}
-      </p>
-      <div id='product-component-00381e5f693'></div>
+    </div>
+
+    <div class="flex flex-row items-center c-home__content pa4">
+      <div class="measure">
+        <div class="c-home__logo mb5">
+          {% include logo.html %}
+        </div>
+        <h4 class="f6 gray ttu tracked mt0 mb0 fw3">Grey Lynn Cycling Club</h4>
+        <h1 class="f2-l f3 fw8 mt1 mb1">{{ page.product-title }}</h1>
+        <p class="f4-l mt3 mb3 fw4">$60.00 NZD</p>
+        <p class="c-home__paragraph f5 lh-copy mt1">
+          {{ page.product-description }}
+        </p>
+        <div id='product-component-00381e5f693'></div>
+      </div>
+    </div>
+
+    <div class="mw8 center flex justify-center items-center center">
+      <div id="image-container" class="c-home__image-container">
+        <img class="db c-home__image-jersey" id="image-black-jersey" src="src/img/black/black-front.png" alt="">
+        <img class="dn c-home__image-jersey" id="image-white-jersey" src="src/img/white/white-front.png" alt="">
+        <div id="image-counter" class="c-home__image-counter c-home__image-counter-animation"></div>
+      </div>
     </div>
   </div>
 
-  <div class="mw7 flex justify-center items-center center">
-    <div id="image-container" class="c-home__image-container">
-      <img class="db c-home__image-jersey" id="image-black-jersey" src="src/img/black/black-front.png" alt="">
-      <img class="dn c-home__image-jersey" id="image-white-jersey" src="src/img/white/white-front.png" alt="">
-      <div id="image-counter" class="c-home__image-counter c-home__image-counter-animation"></div>
+
+</section>
+
+<section class="pv4">
+  <div class="mw8 center pa4">
+    <div class="cf">
+      <div class="fl w-100 w-60-ns">
+        <h4 class="f6 gray ttu tracked mt0 mb4 fw3">Frequently Asked Questions</h4>
+
+        {% for faq in site.data.faq %}
+
+        <div class="measure mb4">
+          <strong>{{ faq.question }}</strong>
+          <p class="c-home__paragraph f5 gray lh-copy mt1">
+            {{ faq.answer }}
+          </p>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="fl w-100 w-40-ns mt4 mt0-l">
+        <h4 class="f6 gray ttu tracked mt0 mb4 fw3">Contact</h4>
+        <div class="measure mb2">
+          <a class="gray" href="mailto:aboutjax1990@gmail.com">Email</a>
+        </div>
+        <div class="measure mb2">
+          <a class="gray" href="https://www.facebook.com/GreyLynncycleclub/">Facebook</a>
+        </div>
+        <div class="measure mb2">
+          <a class="gray" href="https://twitter.com/greylynncc">Twitter</a>
+        </div>
+        <div class="measure mb2">
+          <a class="gray" href="https://www.instagram.com/greylynncc/">Instagram</a>
+        </div>
+
+      </div>
+
     </div>
   </div>
-
-</div>
+</section>
