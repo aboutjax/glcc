@@ -17,7 +17,7 @@ title: Grey Lynn Cycling Club Jersey
 email: aboutjax1990@gmail.component
 description: >- # this means to ignore newlines until "baseurl:"
   Purchase a jersey and we will donate all proceeds to World Bicycle Relief.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "glcc" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GreyLynnCC
 
