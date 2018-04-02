@@ -1,0 +1,42 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: shop
+description: '2018 Summer Jersey'
+product-title: "2018 Summer Jersey"
+product-description: "This is a new short-sleeve cycling jersey designed for riding in hot and humid climates. The fabric of the jersey is extremely technical: perforated for breathability, high-wicking to take sweat away from your skin, and fast-drying. The jersey has an ‘aero’ fit, for an aggressive on-bike position."
+---
+
+<div id="background-colour" class="h100 w100 c-home c-home--black">
+
+  <div class="c-logo">
+    <div class="ph4">
+      {% include logo.html %}
+    </div>
+  </div>
+
+  <div class="flex flex-row justify-center items-center c-home__content">
+    <div class="center measure ph4">
+      <div class="c-home__logo mb5">
+        {% include logo.html %}
+      </div>
+      <h4 class="f6 gray ttu tracked mt0 mb0 fw3">Grey Lynn Cycling Club</h4>
+      <h1 class="f2-l f3 fw8 mt1 mb1">{{ page.product-title }}</h1>
+      <p class="f4-l mt3 mb3 fw4">$60.00 NZD</p>
+      <p class="c-home__paragraph f5 lh-copy mt1">
+        {{ page.product-description }}
+      </p>
+      <div id='product-component-00381e5f693'></div>
+    </div>
+  </div>
+
+  <div class="mw7 flex justify-center items-center center">
+    <div id="image-container" class="c-home__image-container">
+      <img class="db c-home__image-jersey" id="image-black-jersey" src="src/img/black/black-front.png" alt="">
+      <img class="dn c-home__image-jersey" id="image-white-jersey" src="src/img/white/white-front.png" alt="">
+      <div id="image-counter" class="c-home__image-counter c-home__image-counter-animation"></div>
+    </div>
+  </div>
+
+</div>
