@@ -24,7 +24,7 @@ const glccJerseyProductId = 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzUzOTg0NjkzNDU2MQ=='
 
 client.product.fetch(glccJerseyProductId).then((products) => {
   // Do something with the products
-  console.log(products);
+  // console.log(products);
 });
 
 
