@@ -4,31 +4,6 @@ const client = ShopifyBuy.buildClient({
 });
 
 
-const lineItemsToAdd = [
-  {variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC83MDQxODgxMDc5ODQx', quantity: 1}
-];
-
-let checkoutId = null
-
-client.checkout.create().then((checkout) => {
-  checkoutId = checkout.id
-
-  checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
-    console.log(checkout.lineItems);
-  })
-})
-
-
-
-const glccJerseyProductId = 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzUzOTg0NjkzNDU2MQ=='
-
-client.product.fetch(glccJerseyProductId).then((products) => {
-  // Do something with the products
-  // console.log(products);
-});
-
-
-
 /*<![CDATA[*/
 
 (function () {
@@ -210,7 +185,7 @@ client.product.fetch(glccJerseyProductId).then((products) => {
 
 
 
-let backgroundElement = document.getElementById('background-colour')
+let backgroundElement = document.getElementById('body')
 let imageContainer = document.getElementById('image-container')
 let blackJersey = document.getElementById('image-black-jersey')
 let whiteJersey = document.getElementById('image-white-jersey')

@@ -4,14 +4,38 @@
 $small: 700px;
 $white: #FFFFFF;
 $dark-gray: #343434;
+$light-background: #cde7ee;
+$header-height: 10rem;
 
+
+.c-header {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: $small) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+}
 
 .c-home-background {
   transition: all 1s ease-in-out;
+
+  .c-home--black & {
+    background-color: $dark-gray;
+  }
+
+  .c-home--white & {
+    background-color: $light-background;
+  }
 }
 
 .c-home {
-  min-height: 100vh;
+  min-height: calc(100vh - 10rem);
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -24,14 +48,11 @@ $dark-gray: #343434;
 }
 
 .c-logo {
-  display: none;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
 
   @media screen and (max-width: $small) {
-    height: 9rem;
-    padding: 1rem;
-    justify-content: flex-start;
-    align-items: center;
-    display: flex;
   }
 
   svg {
@@ -76,7 +97,7 @@ $dark-gray: #343434;
 }
 
 .c-home--white {
-  background-color: #cde7ee;
+  background-color: $light-background;
 }
 
 .c-home__content {
@@ -151,5 +172,26 @@ $dark-gray: #343434;
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.c-nav {
+
+  @media screen and (max-width: $small) {
+    margin-top: 4rem;
+  }
+
+
+
+  a {
+
+    .c-home--black & {
+      color: $white;
+    }
+
+    .c-home--white & {
+      color: $dark-gray;
+    }
+    text-decoration: none;
   }
 }
