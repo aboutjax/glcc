@@ -6,6 +6,23 @@
   <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
   <link rel="stylesheet" href={{"/css/shop.css" | prepend: site.baseurl }}>
   <link rel="icon" href="{{"/src/img/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon"/>
+
+  <!-- twitter cards start -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@greylynncc" />
+  <meta name="twitter:image" content="{{site.baseurl}}/src/img/seo/og-image.png">
+  <meta name="twitter:title" content="{{site.title}}">
+  <meta name="twitter:description" content="{{site.description}}">
+  <!-- twitter cards end -->
+
+  <!-- open graph start -->
+  <meta property="og:title" content="{{site.title}}" />
+  <meta property="og:description" content="{{site.description}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{site.url}}" />
+  <meta property="og:image" content="{{site.baseurl}}/src/img/seo/og-image.png"/>
+  <!-- open graph end -->
+
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' -%}
     {%- include google-analytics.html -%}
