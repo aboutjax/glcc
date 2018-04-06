@@ -120,10 +120,9 @@ $dark-gray: #343434;
     background-color: $dark-gray;
   }
 
-  position: fixed;
+  position: absolute;
   width: 100%;
-  height: 0.3rem;
-  border-radius: 3rem;
+  height: 0.2rem;
   top: 0;
   left: 0;
 }
