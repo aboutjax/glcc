@@ -26,6 +26,20 @@ $dark-gray: #343434;
 .c-logo {
   display: none;
 
+  a {
+    svg {
+      fill: currentColor
+    }
+
+    .c-home--white & {
+      color: $dark-gray;
+    }
+
+    .c-home--black & {
+      color: $white;
+    }
+  }
+
   @media screen and (max-width: $small) {
     height: 9rem;
     padding: 1rem;
@@ -34,17 +48,6 @@ $dark-gray: #343434;
     display: flex;
   }
 
-  svg {
-    fill: currentColor
-  }
-
-  .c-home--white & {
-    color: $dark-gray;
-  }
-
-  .c-home--black & {
-    color: $white;
-  }
 
 
 }
@@ -52,20 +55,24 @@ $dark-gray: #343434;
 .c-home__logo {
   transition: color 0.2s ease-in-out;
 
+  a {
+    
+    svg {
+      fill: currentColor
+    }
+
+    .c-home--white & {
+      color: $dark-gray;
+    }
+
+    .c-home--black & {
+      color: $white;
+    }
+
+  }
+
   @media screen and (max-width: $small) {
     display: none;
-  }
-
-  svg {
-    fill: currentColor
-  }
-
-  .c-home--white & {
-    color: $dark-gray;
-  }
-
-  .c-home--black & {
-    color: $white;
   }
 
 
@@ -152,4 +159,8 @@ $dark-gray: #343434;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.c-logo-link {
+  color: $white;
 }
